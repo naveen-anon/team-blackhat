@@ -20,7 +20,7 @@ def banner():
     print(Style.BRIGHT + Fore.YELLOW + "██████╔╝██║     ███████║██║     █████╔╝ ███████║   ██║")
     print(Style.BRIGHT + Fore.YELLOW + "██╔══██╗██║     ██╔══██║██║     ██╔═██╗ ██╔══██║   ██║")
     print(Style.BRIGHT + Fore.GREEN + "██████╔╝███████╗██║  ██║╚██████╗██║  ██╗██║  ██║   ██║")
-    print(Style.BIGHT + Fore.GREEN + "╚═════╝ ╚══════╝╚═╝  ╚═╝ ╚═════╝╚═╝  ╚═╝╚═╝  ╚═╝   ╚═╝")
+    print(Style.BRIGHT + Fore.GREEN + "╚═════╝ ╚══════╝╚═╝  ╚═╝ ╚═════╝╚═╝  ╚═╝╚═╝  ╚═╝   ╚═╝")
     print(Fore.CYAN + "      BLACKHAT TOTAL :: VirusTotal-Style URL Scanner")
     print(Fore.MAGENTA + "      Multi-Engine • Offline • Defensive\n")
 
