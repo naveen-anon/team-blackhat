@@ -56,6 +56,10 @@ Final result is calculated using a **Detection Ratio**, similar to VirusTotal.
 
 ---
 
+<p align="center">
+  <img src="https://ik.imagekit.io/g0krxaldh/Screenshot_2026-01-29-15-40-15-16_84d3000e3f4017145260f7618db1d683.jpg" width="700">
+</p>
+
 ## 🧪 Analysis Engines Included
 
 | Engine Name | Purpose |
