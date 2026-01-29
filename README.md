@@ -1,101 +1,90 @@
-# 🔐 BlackHat Total  
-### VirusTotal‑Inspired URL Analysis Tool (Educational)
+# 🧬 BlackHat Total
+### Multi-Engine URL Scanner (VirusTotal-Inspired)
 
-BlackHat Total is a **lightweight, open‑source URL analysis tool** inspired by the
-multi‑engine approach of **VirusTotal**.
+BlackHat Total is a **local, multi-engine URL analysis tool** inspired by the
+**VirusTotal detection-ratio model**.
 
-It is designed **strictly for cyber‑security education, training, and awareness**,
-helping students understand **how phishing URLs are analyzed**, not how attacks are performed.
+It analyzes a URL using **independent scanning engines**, explains *why* a URL
+is flagged, and produces an **analyst-style verdict**.
 
----
-
-## 📌 Why BlackHat Total?
-
-Most beginners see only:
-> “This link is dangerous.”
-
-BlackHat Total answers:
-> **WHY** it is dangerous  
-> **HOW** attackers design it  
-> **WHAT** indicators analysts look for  
-
-This builds a **real Blue‑Team / SOC mindset**.
+> Built for **cyber-security education, SOC training, and student labs**
 
 ---
 
-## 🎯 Core Objectives
+## ⚙️ Features
 
-- Understand phishing URL patterns
-- Learn attacker manipulation techniques
-- Practice analyst‑style investigation
-- Study multi‑engine detection logic
-- Build strong cyber‑security fundamentals
+- Multi-engine URL analysis
+- VirusTotal-style detection ratio
+- Engine-wise explanation
+- Local scanning (no API, no data upload)
+- JSON report generation
 
 ❌ No exploitation  
-❌ No payloads  
-❌ No attacks  
+❌ No payload delivery  
+❌ No attack modules  
 
 ---
 
-## 🧱 Project Structure (Minimal & Clean)
-Designed intentionally with **only 2 core files**  
-to keep learning simple and focused.
-
----
-
-## ⚙️ How It Works (VirusTotal‑Style Logic)
-
-A single URL is scanned by **multiple independent engines**.
-
-Each engine:
-- Analyzes a specific indicator
-- Gives its own verdict
-- Explains its reasoning
-
-Final result is calculated using a **Detection Ratio**, similar to VirusTotal.
-
----
-
-<p align="center">
-  <img src="https://ik.imagekit.io/g0krxaldh/Screenshot_2026-01-29-15-40-15-16_84d3000e3f4017145260f7618db1d683.jpg" width="700">
-</p>
-
-## 🧪 Analysis Engines Included
+## 🧪 Detection Engines
 
 | Engine Name | Purpose |
 |------------|--------|
-| URL Structure Engine | Detects long URLs & typosquatting |
-| Phishing Keyword Engine | Finds social‑engineering bait words |
-| Entropy Engine | Detects obfuscation & randomness |
-| HTTPS Trust Engine | Explains false trust in HTTPS |
+| URL Structure Engine | Long URLs, typosquatting |
+| Phishing Keyword Engine | Social-engineering bait words |
+| Entropy Engine | Obfuscation & randomness |
+| HTTPS Trust Engine | False HTTPS trust |
 
 Each engine returns:
 - `CLEAN`
 - `SUSPICIOUS`
+- `MALICIOUS`
+
+---
+
+## 📊 Verdict Logic
+
+| Detection Ratio | Result |
+|----------------|--------|
+| 2+ MALICIOUS | 🚨 Likely Phishing |
+| 2+ SUSPICIOUS | ⚠️ Suspicious |
+| Else | ✅ Clean |
+
+Inspired by **VirusTotal scan ratios**.
 
 ---
 
 ## ▶️ Installation & Usage
 
-### 1️⃣ Clone the repository
-> - git clone https://github.com/naveen-anon/team-blackhat.git
-> - pip3 install -r requirement.txt
-> - cd team-blackhat
-> - python3 main.py
+```bash
+git clone https://github.com/naveen-anon/team-blackhat.git
+cd team-blackhat
+pip3 install -r requirements.txt
+python3 main.py
+````
+## 📁 Output
+Colorized CLI table
+Final verdict banner
+JSON scan report
 
-## 🔐 Legal & Ethical Notice
-This project is intended ONLY for educational and defensive purposes.
-Do NOT use for real‑world attacks
-Do NOT target live systems
-Do NOT misuse analysis results
+blackhat_report.json
+
+## 🗺️ Roadmap
+🔊 Sound alert on phishing detection
+🌐 Local VirusTotal-style Web UI (Flask)
+📦 Kali Linux .deb package
+🧪 Auto-generated student lab questions
+
+
+## ⚠️ Legal Disclaimer
+This tool is intended strictly for educational and defensive purposes.
+Do NOT use for:
+Real-world attacks
+Targeting live systems
+Malicious activity
 The author is not responsible for misuse.
-## 🚀 Roadmap
-CLI color & table output
-Engine‑wise confidence scoring
-Local Web UI (Flask)
-Kali Linux .deb package
-Student lab questions & challenges
-## 👤 Author & Credits
-Admin: @naveen-anon
-Team: Team Black Hat
-Focus Area: Cyber Security Education & Awareness
+
+
+## 👤 Author
+@naveen-anon
+Team Black Hat
+Focus: Cyber Security Education & Awareness
