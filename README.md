@@ -79,6 +79,16 @@ Each engine returns:
 > - cd team-blackhat
 > - python3 main.py
 
+## 📸 Tool Output Preview
+
+<p align="center">
+  <img src="Screenshot_2026-01-29-15-4
+
+0-15-16_84d3000e3f401714
+
+5260f7618db1d683.jpg" width="700">
+</p>
+
 ## 🔐 Legal & Ethical Notice
 This project is intended ONLY for educational and defensive purposes.
 Do NOT use for real‑world attacks
