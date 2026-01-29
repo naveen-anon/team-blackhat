@@ -75,6 +75,7 @@ Each engine returns:
 
 ### 1️⃣ Clone the repository
 > - git clone https://github.com/naveen-anon/team-blackhat.git
+> - pip3 install -r requirement.txt
 > - cd team-blackhat
 > - python3 main.py
 
