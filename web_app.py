@@ -1,4 +1,4 @@
-from flask import Flask, render_template_string, request
+from flask import Flask, request, render_template_string
 from engines import *
 
 app = Flask(__name__)
@@ -11,14 +11,14 @@ ENGINES = {
 }
 
 HTML = """
-<!DOCTYPE html>
+<!doctype html>
 <html>
 <head>
 <title>BLACKHAT TOTAL</title>
 <style>
-body { background:#0b0b0b; color:#00ff99; font-family: monospace; }
-table { width:100%; border-collapse: collapse; }
-td,th { border:1px solid #00ff99; padding:8px; }
+body{background:#0b0b0b;color:#00ff99;font-family:monospace}
+table{border-collapse:collapse;width:100%}
+td,th{border:1px solid #00ff99;padding:8px}
 </style>
 </head>
 <body>
@@ -47,7 +47,8 @@ def home():
         url=request.form["url"]
         for name,engine in ENGINES.items():
             v,reason=engine(url)
-            results.append([name,v,", ".join(reason)])
+            results.append([name,v,", ".join(reason) if reason else "-"])
     return render_template_string(HTML, results=results)
 
-app.run(debug=False)
+if __name__ == "__main__":
+    app.run()
